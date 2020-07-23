@@ -5,6 +5,7 @@ const btnEl = document.getElementById('btn');
 const formEl = document.querySelector('.form');
 const errorEl = document.querySelector('.form__msg--error');
 
+
 formEl.addEventListener('submit', e => {
     e.preventDefault();
     const inputValue = inputEl.value;
@@ -14,10 +15,9 @@ formEl.addEventListener('submit', e => {
             // console.log("valid");
             // const validEmail = inputValue;
             sendPostRequest(inputValue);
+            if (errorEl.innerText != '') inputEl.value = '';
             errorEl.innerText = 'Thank you. Your email has been sent';
             errorEl.classList.add('form__msg--success');
-            inputEl.value = '';
-
         } else {
             errorEl.innerText = "please check your email";
         }
@@ -35,7 +35,7 @@ function emailIsValid(email) {
 }
 
 function sendPostRequest(validEmail) {
-    axios.post('https://reqres.in/api/users', {
+    axios.post('111https://reqres.in/api/users', {
             email: validEmail
         }, {
             headers: {
@@ -44,9 +44,12 @@ function sendPostRequest(validEmail) {
             }
         })
         .then(function(response) {
-            console.log(response);
+            // console.log(response);
+
         })
         .catch(function(error) {
-            console.log(error);
+            // console.log(error);
+            errorEl.innerText = "Error, something went wrong. Please try again later";
+            thereAreErrors = true;
         });
 }
