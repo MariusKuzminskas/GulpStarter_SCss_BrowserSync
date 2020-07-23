@@ -1,2 +1,50 @@
-body h1 {
-  color: tomato; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.title--page {
+  margin: 30px 0; }
+
+.form {
+  background-color: #d7d712;
+  max-width: 300px;
+  padding: 15px; }
+  .form__heading {
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 25px; }
+  .form__input-block {
+    position: relative; }
+
+.input-block__input {
+  background-color: rgba(255, 255, 255, 0.479);
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 50px 16px 20px;
+  width: 100%;
+  font-size: 15px; }
+  .input-block__input::placeholder {
+    font-size: 15px;
+    color: #333; }
+
+.input-block__btn {
+  border: none;
+  box-shadow: none;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 7px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer; }
