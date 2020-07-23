@@ -9,7 +9,7 @@ function style() {
         // pass that to compiler
         .pipe(sass())
         // where to save 
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./dist/css'))
         // stream changes to all browsers
         .pipe(browserSync.stream());
 }
