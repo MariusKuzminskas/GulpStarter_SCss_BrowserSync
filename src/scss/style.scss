@@ -33,6 +33,14 @@ $main-color: #d7d712;
     &__input-block {
         position: relative;
     }
+    &__msg--error {
+        margin-top: 7px;
+        text-align: center;
+        color: tomato;
+    }
+    &__msg--success {
+        color: green;
+    }
 }
 
 .input-block {

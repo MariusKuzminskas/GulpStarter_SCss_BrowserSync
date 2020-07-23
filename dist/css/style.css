@@ -23,6 +23,12 @@ body {
     margin-bottom: 25px; }
   .form__input-block {
     position: relative; }
+  .form__msg--error {
+    margin-top: 7px;
+    text-align: center;
+    color: tomato; }
+  .form__msg--success {
+    color: green; }
 
 .input-block__input {
   background-color: rgba(255, 255, 255, 0.479);
